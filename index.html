@@ -14,7 +14,7 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #081E3F 0%, #1a2f5a 50%, #B6862C 100%);
             min-height: 100vh;
             color: #333;
             padding: 20px;
@@ -25,13 +25,13 @@
             margin: 0 auto;
             background: rgba(255, 255, 255, 0.95);
             border-radius: 24px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 20px 60px rgba(8, 30, 63, 0.2);
             backdrop-filter: blur(20px);
             overflow: hidden;
         }
 
         .header {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            background: linear-gradient(135deg, #081E3F 0%, #B6862C 100%);
             padding: 40px 30px;
             text-align: center;
             position: relative;
@@ -58,7 +58,7 @@
             font-size: 3rem;
             font-weight: 800;
             color: white;
-            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             margin-bottom: 10px;
             position: relative;
             z-index: 2;
@@ -74,7 +74,7 @@
 
         .input-section {
             padding: 30px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid rgba(8, 30, 63, 0.1);
         }
 
         .input-container {
@@ -89,8 +89,8 @@
         }
 
         .input-container:focus-within {
-            border-color: #4facfe;
-            box-shadow: 0 0 0 4px rgba(79, 172, 254, 0.1);
+            border-color: #B6862C;
+            box-shadow: 0 0 0 4px rgba(182, 134, 44, 0.15);
             background: white;
         }
 
@@ -105,11 +105,11 @@
         }
 
         #taskInput::placeholder {
-            color: #94a3b8;
+            color: #64748b;
         }
 
         .add-btn {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            background: linear-gradient(135deg, #081E3F 0%, #B6862C 100%);
             color: white;
             border: none;
             padding: 16px 24px;
@@ -118,12 +118,13 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+            box-shadow: 0 4px 15px rgba(8, 30, 63, 0.3);
         }
 
         .add-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(79, 172, 254, 0.4);
+            box-shadow: 0 8px 25px rgba(8, 30, 63, 0.4);
+            background: linear-gradient(135deg, #0a2249 0%, #c99532 100%);
         }
 
         .add-btn:active {
@@ -136,6 +137,7 @@
             display: flex;
             justify-content: space-around;
             text-align: center;
+            border-bottom: 1px solid rgba(8, 30, 63, 0.05);
         }
 
         .stat-item {
@@ -147,7 +149,7 @@
         .stat-number {
             font-size: 2rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #081E3F 0%, #B6862C 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -167,19 +169,20 @@
         .empty-state {
             text-align: center;
             padding: 60px 20px;
-            color: #94a3b8;
+            color: #64748b;
         }
 
         .empty-state i {
             font-size: 4rem;
             margin-bottom: 20px;
             opacity: 0.3;
+            color: #B6862C;
         }
 
         .empty-state h3 {
             font-size: 1.5rem;
             margin-bottom: 10px;
-            color: #64748b;
+            color: #081E3F;
         }
 
         .task-item {
@@ -187,8 +190,8 @@
             border-radius: 16px;
             padding: 20px;
             margin-bottom: 16px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 12px rgba(8, 30, 63, 0.08);
+            border: 1px solid rgba(8, 30, 63, 0.1);
             display: flex;
             align-items: center;
             gap: 16px;
@@ -209,7 +212,8 @@
 
         .task-item:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 25px rgba(8, 30, 63, 0.15);
+            border-color: rgba(182, 134, 44, 0.2);
         }
 
         .task-item.completed {
@@ -231,12 +235,12 @@
         }
 
         .task-checkbox:hover {
-            border-color: #4facfe;
+            border-color: #B6862C;
         }
 
         .task-checkbox.checked {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            border-color: #4facfe;
+            background: linear-gradient(135deg, #081E3F 0%, #B6862C 100%);
+            border-color: #B6862C;
         }
 
         .task-checkbox.checked::after {
@@ -259,8 +263,8 @@
         }
 
         .delete-btn {
-            background: #fee2e2;
-            color: #dc2626;
+            background: #fecaca;
+            color: #660B05;
             border: none;
             padding: 12px;
             border-radius: 10px;
@@ -271,7 +275,8 @@
         }
 
         .delete-btn:hover {
-            background: #fecaca;
+            background: #fee2e2;
+            color: #660B05;
             transform: scale(1.1);
         }
 
@@ -279,7 +284,7 @@
             padding: 30px;
             text-align: center;
             background: #f8fafc;
-            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            border-top: 1px solid rgba(8, 30, 63, 0.05);
         }
 
         .social-links {
@@ -299,13 +304,13 @@
             text-decoration: none;
             border-radius: 12px;
             transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 8px rgba(8, 30, 63, 0.08);
             font-weight: 500;
         }
 
         .social-link:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 6px 20px rgba(8, 30, 63, 0.15);
             color: #334155;
         }
 
@@ -320,12 +325,12 @@
         }
 
         .social-link.website:hover {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            background: linear-gradient(135deg, #081E3F 0%, #B6862C 100%);
             color: white;
         }
 
         .copyright {
-            color: #94a3b8;
+            color: #64748b;
             font-size: 0.9rem;
             margin-top: 15px;
         }
@@ -454,8 +459,42 @@
         let tasks = [];
         let taskIdCounter = 1;
 
-        // Load tasks from memory on page load
+        // Save tasks to localStorage
+        function saveTasksToStorage() {
+            try {
+                localStorage.setItem('taskflow_tasks', JSON.stringify(tasks));
+                localStorage.setItem('taskflow_counter', taskIdCounter.toString());
+                console.log('Tasks saved to localStorage');
+            } catch (e) {
+                console.warn('Could not save tasks to localStorage:', e);
+            }
+        }
+
+        // Load tasks from localStorage
+        function loadTasksFromStorage() {
+            try {
+                const savedTasks = localStorage.getItem('taskflow_tasks');
+                const savedCounter = localStorage.getItem('taskflow_counter');
+                
+                if (savedTasks) {
+                    tasks = JSON.parse(savedTasks);
+                    console.log('Loaded tasks from localStorage:', tasks);
+                }
+                
+                if (savedCounter) {
+                    taskIdCounter = parseInt(savedCounter, 10);
+                    console.log('Loaded counter from localStorage:', taskIdCounter);
+                }
+            } catch (e) {
+                console.warn('Could not load tasks from localStorage:', e);
+                tasks = [];
+                taskIdCounter = 1;
+            }
+        }
+
+        // Load tasks from localStorage on page load
         function init() {
+            loadTasksFromStorage();
             updateStats();
             renderTasks();
         }
@@ -480,6 +519,7 @@
             tasks.push(newTask);
             taskInput.value = '';
             
+            saveTasksToStorage();
             updateStats();
             renderTasks();
             taskInput.focus();
@@ -490,6 +530,7 @@
             const task = tasks.find(t => t.id === taskId);
             if (task) {
                 task.completed = !task.completed;
+                saveTasksToStorage();
                 updateStats();
                 renderTasks();
             }
@@ -498,6 +539,7 @@
         // Delete task
         function deleteTask(taskId) {
             tasks = tasks.filter(t => t.id !== taskId);
+            saveTasksToStorage();
             updateStats();
             renderTasks();
         }
