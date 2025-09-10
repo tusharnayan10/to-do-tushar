@@ -431,15 +431,15 @@
 
         <footer class="footer">
             <div class="social-links">
-                <a href="https://github.com/tusharnayan10" class="social-link github" target="_blank">
+                <a href="https://github.com/yourusername" class="social-link github" target="_blank">
                     <i class="fab fa-github"></i>
                     GitHub
                 </a>
-                <a href="https://www.linkedin.com/in/tushar-nayan-cs/" class="social-link linkedin" target="_blank">
+                <a href="https://linkedin.com/in/yourusername" class="social-link linkedin" target="_blank">
                     <i class="fab fa-linkedin"></i>
                     LinkedIn
                 </a>
-                <a href="https://tusharnayan.netlify.app/" class="social-link website" target="_blank">
+                <a href="https://yourwebsite.com" class="social-link website" target="_blank">
                     <i class="fas fa-globe"></i>
                     Website
                 </a>
@@ -480,6 +480,7 @@
             tasks.push(newTask);
             taskInput.value = '';
             
+            saveTasksToStorage();
             updateStats();
             renderTasks();
             taskInput.focus();
@@ -490,6 +491,7 @@
             const task = tasks.find(t => t.id === taskId);
             if (task) {
                 task.completed = !task.completed;
+                saveTasksToStorage();
                 updateStats();
                 renderTasks();
             }
@@ -498,6 +500,7 @@
         // Delete task
         function deleteTask(taskId) {
             tasks = tasks.filter(t => t.id !== taskId);
+            saveTasksToStorage();
             updateStats();
             renderTasks();
         }
