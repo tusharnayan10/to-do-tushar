@@ -480,7 +480,6 @@
             tasks.push(newTask);
             taskInput.value = '';
             
-            saveTasksToStorage();
             updateStats();
             renderTasks();
             taskInput.focus();
@@ -491,7 +490,6 @@
             const task = tasks.find(t => t.id === taskId);
             if (task) {
                 task.completed = !task.completed;
-                saveTasksToStorage();
                 updateStats();
                 renderTasks();
             }
@@ -500,7 +498,6 @@
         // Delete task
         function deleteTask(taskId) {
             tasks = tasks.filter(t => t.id !== taskId);
-            saveTasksToStorage();
             updateStats();
             renderTasks();
         }
